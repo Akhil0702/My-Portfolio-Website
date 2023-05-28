@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5f8c900817.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Akhil</span> <br>From Hyderabad</h1>
+            </div>
+        </div>
+    </div>
+    <!------about------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Welcome to my portfolio website, where creativity and innovation come together! I'm thrilled to have you here.
+                    </p>I am Vancha Akhil Reddy. With a deep love for computer engineering, I strive to push boundaries and create meaningful experiences through my work.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>C<br>Java<br>Python</li>
+                            <li><span>Web Technology</span><br>HTML<br>CSS<br>JS<br>PHP</li>
+                            <li><span>IIT Bombay</span><br>Java Training</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>Cisco</span><br>Programming in C</li>
+                            <li><span>Oracle</span><br>Database programming with SQL</li>
+                            <li><span>Other</span><br>Linux programming<br>Github</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Present</span><br>Vidya Jyothi Institute Of Technology</li>
+                            <li><span>2020</span><br>Sri Chaitanya Junior Kalasala</li>
+                            <li><span>2018</span><br>Vidya Nikethan High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------projects-------------->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Online banking System</h2>
+                    <p>An online banking system, also known as internet banking or electronic banking, is a digital platform that allows customers to perform various banking transactions and services over the internet. It provides users with convenient access
+                        to their bank accounts and financial services from the comfort of their own devices</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Instagram clone</h2>
+                    <p>An Instagram clone is a web or mobile application designed to replicate the key features and functionality of the popular social media platform, Instagram. It aims to provide a similar user experience and allow users to share photos,
+                        videos, and stories with their followers, engage with content through likes, comments, and direct messages, as well as discover and follow other users..</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>Instagram clone</h2>
+                    <p>An Instagram clone is a web or mobile application designed to replicate the key features and functionality of the popular social media platform, Instagram. It aims to provide a similar user experience and allow users to share photos,
+                        videos, and stories with their followers, engage with content through likes, comments, and direct messages, as well as discover and follow other users..</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
